@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#334f40"/><title>Lernspur · Die native iPhone-App</title>
+<link rel="icon" href="./logo.svg"/>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f5ee;color:#25382d;font-family:-apple-system,BlinkMacSystemFont,sans-serif}main{max-width:1100px;margin:auto;padding:40px 24px 70px}a{color:#334f40;text-underline-offset:5px}header{display:flex;justify-content:space-between;align-items:center;font-size:13px;border-bottom:1px solid #dddfd3;padding-bottom:25px}header img{width:40px;vertical-align:middle;margin-right:10px}header strong{font-size:23px;letter-spacing:-1px}h1{font:400 clamp(36px,6vw,62px)/1.1 Georgia,serif;letter-spacing:-1.5px;margin:48px 0 20px}p{font-size:15px;line-height:1.75;color:#72786a;max-width:630px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px}figure{margin:0}figure img{display:block;width:100%;border-radius:25px;border:1px solid #dddfd3}figcaption{font-size:13px;padding:16px 0;color:#72786a;line-height:1.6}.download{display:inline-block;margin:16px 0;background:#334f40;color:white;border-radius:14px;padding:15px 23px;text-decoration:none;font-size:14px}.note{margin-top:35px;padding-top:25px;border-top:1px solid #dddfd3;font-size:13px}a:focus-visible{outline:3px solid #839e70;outline-offset:5px}@media(max-width:700px){.grid{grid-template-columns:1fr 1fr;gap:20px}}@media(max-width:430px){.grid{grid-template-columns:1fr;gap:25px}figure{max-width:350px;margin:auto}header a{font-size:11px}main{padding:25px 22px 50px}}
+</style>
+</head>
+<body><main><header><strong><img src="./logo.svg" alt=""/>lernspur</strong><a href="./">Zur interaktiven Vorschau</a></header>
+<h1>So sieht Lernspur<br/>auf dem iPhone aus.</h1>
+<p>Direkte Aufnahmen aus der nativen SwiftUI-App im iPhone-Simulator. Mit lokalem SQLite-Speicher, Fotos, Sprachmemos, IPERKA-Berichten und echtem PDF-Export.</p>
+<div class="grid">
+<figure><img src="./native/01-capture-home.png" alt="SwiftUI-Startseite zum schnellen Festhalten einer Notiz"/><figcaption>01 · Ein Gedanke und ein Tap. Dein Journal beginnt direkt auf der Startseite.</figcaption></figure>
+<figure><img src="./native/02-journal.png" alt="Gespeicherter Journaleintrag im nativen chronologischen Journal" loading="lazy"/><figcaption>02 · Gespeichert und automatisch datiert. Kompetenzen lassen sich später zuordnen.</figcaption></figure>
+<figure><img src="./native/03-coverage.png" alt="Kompetenzübersicht mit der Anzahl zugeordneter Einträge" loading="lazy"/><figcaption>03 · Gesammelte Einträge machen Lücken sichtbar. Die Codes sind ausdrücklich Demo-Platzhalter.</figcaption></figure>
+<figure><img src="./native/04-completed-report.png" alt="Ausgefüllte IPERKA-Abschnitte und aktiver PDF-Export" loading="lazy"/><figcaption>04 · Alle sechs IPERKA-Abschnitte sind editierbar. Änderungen werden lokal gespeichert.</figcaption></figure>
+<figure><img src="./native/05-pdf-share-sheet.png" alt="iOS-Teilen-Menü mit dem generierten Lernbericht als PDF" loading="lazy"/><figcaption>05 · Ein echtes PDF über das iPhone-Teilen-Menü sichern oder weitergeben.</figcaption></figure>
+</div>
+<a class="download" href="./native/beispiel-lernbericht.pdf">Beispiel-PDF ansehen ↗</a>
+<p class="note">Die interaktive Vorschau und die native App haben getrennte lokale Daten. Diese Aufnahmen zeigen fiktive Testeinträge. Das Xcode-Projekt wird separat bereitgestellt; zur Installation auf deinem iPhone wählst du in Xcode dein eigenes Signing-Team.</p>
+</main></body></html>

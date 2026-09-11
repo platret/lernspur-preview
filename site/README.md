@@ -9,7 +9,7 @@
 
 Eine Notiz, ein Foto oder eine Sprachmemo: Lernspur beginnt beim Festhalten. Zuordnen kannst du später. Aus deinen alltäglichen Momenten werden Wochenrückblicke, praktische Fortschritte und Lernberichte nach IPERKA.
 
-Lernspur **1.2.0** ist eine native SwiftUI-Testversion mit lokalem SQLite-Speicher. Kein Account, kein Backend und keine aktive KI-Verarbeitung. Dieses Repository enthält die **Promo-Website, Browser-Demo und illustrative App-Aufnahmen**. Das Xcode-Projekt wird separat gepflegt und ist hier nicht enthalten.
+Lernspur **1.2.1** ist eine native SwiftUI-Testversion mit lokalem SQLite-Speicher. Kein Account, kein Backend und keine aktive KI-Verarbeitung. Dieses Repository enthält die **Promo-Website, Browser-Demo und illustrative App-Aufnahmen**. Das Xcode-Projekt wird separat gepflegt und ist hier nicht enthalten.
 
 <p align="center">
   <img src="screens/capture.png" width="220" alt="Notiz in Lernspur erfassen" />
@@ -24,7 +24,7 @@ Lernspur **1.2.0** ist eine native SwiftUI-Testversion mit lokalem SQLite-Speich
 | --- | --- |
 | Text, Foto und Sprachmemo schnell festhalten | Eigene Fragen und Antworten als Lernkarten |
 | Module, ÜKs, Projekte und optionale Kompetenzen | Karten einem Modul zuordnen und filtern |
-| Wochenziele mit Schritten und Rückgängig-Funktion | Antworten aufdecken, «Gewusst» oder «Noch üben» wählen |
+| Wochenziele mit Schritten und Rückgängig-Funktion | Antworten aufdecken, nach rechts («Gewusst») oder links («Noch üben») wischen |
 | Wochenrückblicke, offene Fragen und Lernfortschritt | Karten nach gespeichertem Lernstand wiederholen |
 | Sechs IPERKA-Abschnitte und nativer PDF-Export | Geplant: Cloud-Synchronisation und KI-Zusammenfassungen |
 | Homescreen-Widget, Teilen-Erweiterung und manuelle Backups | Geplanter Preis: CHF 10 / Monat |
@@ -51,7 +51,7 @@ npm ci
 npm run dev
 ```
 
-Öffne `http://localhost:5187`. Die Website verwendet TypeScript, CSS und Vite ohne UI-Framework, externe Fonts, Tracker oder 3D-Bibliothek. Das Phone-Modell besteht aus CSS-Flächen mit Perspektive und Tiefe. Seine Drehung folgt dem Scrollfortschritt.
+Öffne `http://localhost:5187`. Die Website verwendet TypeScript, CSS und Vite ohne UI-Framework, externe Fonts, Tracker oder 3D-Bibliothek. Das Phone-Modell besteht aus CSS-Flächen mit Perspektive und Tiefe. Seine Drehung folgt dem Scrollfortschritt. Die burgunderrote Konzept-Rückseite hat ein erhöhtes Kameraplateau und Linsen mit eigener Tiefe. «Get the app» ist bis zur Veröffentlichung ein deaktivierter App-Store-Platzhalter.
 
 ```text
 site/

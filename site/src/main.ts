@@ -2,6 +2,10 @@ import './style.css';
 
 const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';
 const star = '<svg viewBox="0 0 80 80" fill="currentColor" aria-hidden="true"><path d="m40 0 8 28 26-15-15 27 21 8-28 7-12 25-8-28L6 67l15-27L0 32l28-7z"/></svg>';
+const appStoreIcon = '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29" rx="7" stroke-width="1.5"/><path d="m12 8 10 17M20 8 10 25M7 21h18"/></svg>';
+const getApp = `<button class="store-button" type="button" disabled aria-label="Get the app – bald im App Store verfügbar">${appStoreIcon}<span><small>Bald im App Store</small><strong>Get the app</strong></span></button>`;
+const cameraLayers = Array.from({ length: 9 }, (_, i) => `<span class="camera-layer" style="--depth:${i + 1}px"></span>`).join('');
+const lenses = Array.from({ length: 3 }, (_, i) => `<span class="camera-lens lens-${i + 1}">${Array.from({ length: 5 }, (_, j) => `<i class="lens-ring" style="--depth:${j + 1}px"></i>`).join('')}<i class="lens-glass"></i></span>`).join('');
 const layers = Array.from({ length: 13 }, (_, i) => `<div class="phone-layer" style="--depth:${i - 6}px"></div>`).join('');
 const stories = [
   { number: '01', tag: 'FESTHALTEN', title: 'Bevor der Moment <br>vorbei ist.', text: 'Ein Gedanke. Ein Foto. Eine Sprachmemo. Mehr brauchst du nicht. Zuordnen kannst du später.', foot: 'Einmal tippen. Gespeichert.', image: 'capture', alt: 'Lernspur zeigt die Erfassung mit Text, Foto und Sprachmemo.' },
@@ -15,7 +19,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <header class="site-header">
   <a class="brand" href="#" aria-label="Lernspur, nach oben"><img src="./logo.svg" alt="" width="36" height="36" /><span>lernspur</span></a>
   <nav aria-label="Hauptnavigation"><a href="#entdecken">Entdecken</a><a href="#dein-weg">Dein Lernweg</a><a href="#plus">Free & Plus</a></nav>
-  <a class="button button-small" href="./walkthrough.html">App ausprobieren ${arrow}</a>
+  ${getApp}
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
@@ -33,7 +37,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <div class="phone-model">
             ${layers}
             <div class="phone-front"><div class="phone-screen"><img src="./screens/capture.png" width="1206" height="2622" alt="" fetchpriority="high" /><span class="dynamic-island"></span></div></div>
-            <div class="phone-back"><div class="camera-bump"><i></i><i></i><i></i><b></b></div><img src="./logo.svg" alt="" /><p>Deine Gedanken. <br>Bleiben deine.</p><small>L E R N S P U R</small></div>
+            <div class="phone-back"><div class="camera-bump">${cameraLayers}<div class="camera-face">${lenses}<span class="camera-flash"></span><span class="camera-sensor"></span><span class="camera-mic"></span></div></div><img src="./logo.svg" alt="" /><p>Deine Gedanken. <br>Bleiben deine.</p><small>L E R N S P U R</small></div>
             <div class="phone-button"></div>
           </div>
         </div>
@@ -80,7 +84,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <details><summary>Was bekomme ich mit Plus?<span>+</span></summary><p>Aktuell: eigene Lernkarten, Zuordnung zu Modulen und einen Übungsmodus. Der geplante Preis ist CHF 10 pro Monat. In dieser Testversion schaltet der Abo-Button Plus kostenlos frei. Cloud-Speicher und KI-Zusammenfassungen sind erst geplant und nicht aktiv.</p></details>
     <details><summary>Sind die offiziellen Kompetenzen schon enthalten?<span>+</span></summary><p>Die betrieblichen Handlungskompetenzen sind klar gekennzeichnete Demo-Platzhalter. Du kannst persönliche Module und Fächer anlegen und zulässige Modullisten importieren. Der offizielle Modulbaukasten lässt sich in der App öffnen.</p></details>
   </div></section>
-  <section class="outro"><span aria-hidden="true">${star}</span><p class="eyebrow">DER NÄCHSTE AHA-MOMENT KOMMT BESTIMMT.</p><h2>Gib ihm <br><em>eine Lernspur.</em></h2><a class="button" href="./walkthrough.html">Jetzt im Browser ausprobieren ${arrow}</a><p>Ohne Anmeldung. Mit Beispielinhalten. <br>Die Basis-Demo ist unabhängig von der iPhone-App.</p></section>
+  <section class="outro"><span aria-hidden="true">${star}</span><p class="eyebrow">DER NÄCHSTE AHA-MOMENT KOMMT BESTIMMT.</p><h2>Gib ihm <br><em>eine Lernspur.</em></h2>${getApp}<p>Fürs iPhone. Bald im App Store. <br><a href="./walkthrough.html">Bis dahin: interaktive Basis-Demo ansehen ↗</a></p></section>
 </main>
 <footer><a class="brand" href="#"><img src="./logo.svg" alt="" width="30" height="30" /><span>lernspur</span></a><span>Für deinen Lernweg. In deinem Tempo.</span><div><a href="./native.html">App-Einblicke</a><a href="https://github.com/platret/lernspur-preview">GitHub ${arrow}</a></div></footer>`;
 

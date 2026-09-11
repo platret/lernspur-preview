@@ -48,7 +48,8 @@ test('demo link, current gallery and honest Plus status remain available', async
     await expect.poll(() => img.evaluate((el: HTMLImageElement) => el.complete && el.naturalWidth > 0)).toBe(true);
   }
   await page.getByRole('link', { name: 'Zur Startseite' }).click();
-  await page.getByRole('link', { name: 'App ausprobieren', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Get the app – bald im App Store verfügbar' }).first()).toBeDisabled();
+  await page.getByRole('link', { name: 'Basis-Demo öffnen', exact: true }).click();
   await expect(page.locator('#capture-text')).toBeVisible();
   await expect(page.locator('#save-capture')).toBeDisabled();
 });

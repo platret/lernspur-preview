@@ -1,7 +1,7 @@
 <p align="center"><img src="logo.svg" width="76" alt="Lernspur Logo" /></p>
 <h1 align="center">Lernspur</h1>
 <p align="center"><strong>Lernen passiert. Überall.</strong><br>Dein Lernjournal fürs iPhone. Für die kleinen Aha-Momente im Betrieb, in der Schule und im ÜK.</p>
-<p align="center"><a href="https://platret.github.io/lernspur-preview/">Website entdecken</a> · <a href="https://platret.github.io/lernspur-preview/walkthrough.html">Interaktive Basis-Demo</a> · <a href="https://platret.github.io/lernspur-preview/native.html">Native App ansehen</a></p>
+<p align="center"><a href="https://platret.github.io/lernspur-preview/">Website entdecken</a> · <a href="https://platret.github.io/lernspur-preview/release.html">Version 1.0 ansehen</a> · <a href="https://platret.github.io/lernspur-preview/support.html">Hilfe & Kontakt</a></p>
 
 ---
 
@@ -9,37 +9,35 @@
 
 Eine Notiz, ein Foto oder eine Sprachmemo: Lernspur beginnt beim Festhalten. Zuordnen kannst du später. Aus deinen alltäglichen Momenten werden Wochenrückblicke, praktische Fortschritte und Lernberichte nach IPERKA.
 
-Lernspur **1.2.1** ist eine native SwiftUI-Testversion mit lokalem SQLite-Speicher. Kein Account, kein Backend und keine aktive KI-Verarbeitung. Dieses Repository enthält die **Promo-Website, Browser-Demo und illustrative App-Aufnahmen**. Das Xcode-Projekt wird separat gepflegt und ist hier nicht enthalten.
+Lernspur **1.0 (7)** wird für die erste App-Store-Veröffentlichung vorbereitet. Die native SwiftUI-App speichert dein Journal lokal in SQLite. Du kannst das Onboarding manuell oder optional mit Apple durchlaufen. Das Xcode-Projekt wird separat gepflegt und ist hier nicht enthalten.
 
-<p align="center">
-  <img src="screens/capture.png" width="220" alt="Notiz in Lernspur erfassen" />
-  <img src="screens/goals.png" width="220" alt="Ein erreichtes Wochenziel" />
-  <img src="screens/cards.png" width="220" alt="Eine Lernkarte üben" />
-</p>
-<p align="center"><sub>Echte Simulator-Aufnahmen mit fiktiven Testinhalten.</sub></p>
+![Lernspur – Lernen passiert. Überall.](store/banner.png)
 
 ## Was die App kann
 
-| Free – lokal auf deinem Gerät | Plus – aktuell kostenlose Testaktivierung |
+| Free – lokal auf deinem Gerät | Plus – optionales Monatsabo |
 | --- | --- |
-| Text, Foto und Sprachmemo schnell festhalten | Eigene Fragen und Antworten als Lernkarten |
-| Module, ÜKs, Projekte und optionale Kompetenzen | Karten einem Modul zuordnen und filtern |
-| Wochenziele mit Schritten und Rückgängig-Funktion | Antworten aufdecken, nach rechts («Gewusst») oder links («Noch üben») wischen |
-| Wochenrückblicke, offene Fragen und Lernfortschritt | Karten nach gespeichertem Lernstand wiederholen |
-| Sechs IPERKA-Abschnitte und nativer PDF-Export | Geplant: Cloud-Synchronisation und KI-Zusammenfassungen |
-| Homescreen-Widget, Teilen-Erweiterung und manuelle Backups | Geplanter Preis: CHF 10 / Monat |
+| Text, Foto und Sprachmemo schnell festhalten | Eigene Lernkarten erstellen |
+| Eigene Module, ÜKs, Projekte und Kompetenzen | Nach Modul oder Fach üben |
+| Wochenziele, Rückblicke und offene Fragen | Antworten aufdecken und nach links/rechts wischen |
+| Lernberichte nach IPERKA und PDF-Export | Lernstand speichern, offene Karten zuerst |
+| Widget, Teilen-Erweiterung und manuelle Backups | Kauf und Wiederherstellung über Apple |
 
-**Plus ist noch kein echtes Abo.** Der Test-Button aktiviert lokale Vorteile kostenlos. Es erfolgen keine Käufe oder Abbuchungen. Cloud und KI sind nicht verbunden.
+Die Testfreischaltung ist im Release entfernt. Plus verwendet StoreKit 2 und verifizierte Kaufberechtigungen. Cloud-Synchronisation und KI sind nicht enthalten. Neue Installationen starten ohne Demo-Kompetenzen; eigene Kompetenzen und zur Nutzung freigegebene Modullisten können ergänzt werden.
 
-Die App wird derzeit mit Xcode auf Testgeräten installiert. Sie ist noch nicht im App Store oder bei TestFlight. Offizielle Bildungsplan-Kompetenzen werden nicht erfunden: die enthaltenen Codes sind ausdrücklich als DEMO-Platzhalter markiert. Persönliche Module und lizenzierte Importe sind möglich.
+**Noch nicht im App Store veröffentlicht.** Der StoreKit-Code ist lokal getestet; die reale App-Store-Produktkonfiguration und Apples Freigabe stehen noch aus. Der Download-Badge bleibt deshalb deaktiviert, bis eine echte Store-Adresse verfügbar ist.
 
-## Drei Wege, Lernspur zu entdecken
+## Auf deinem iPhone ansehen
 
-- **[Promo](https://platret.github.io/lernspur-preview/):** Ein räumliches iPhone dreht sich beim Scrollen. Vier Kapitel führen durch den Lernalltag; auf dem Handy lassen sie sich seitlich wischen. Eine Einstellung für reduzierte Bewegung wird respektiert.
-- **[Basis-Demo](https://platret.github.io/lernspur-preview/walkthrough.html):** Anklickbare Grundfunktionen aus Version 1.0: erfassen, zuordnen, filtern und einen Bericht schreiben. Eigene Eingaben bleiben separat im Browser. Die neuen nativen Funktionen werden in der Galerie gezeigt.
-- **[App-Galerie](https://platret.github.io/lernspur-preview/native.html):** Aktuelle SwiftUI-Screenshots und ein [echtes Beispiel-PDF](https://platret.github.io/lernspur-preview/native/beispiel-lernbericht.pdf) aus dem nativen Exporter.
+- **[Promo](https://platret.github.io/lernspur-preview/):** Drehbares 3D-Telefon und seitlich wischbare Feature-Kapitel.
+- **[Release-Vorschau](https://platret.github.io/lernspur-preview/release.html):** Sechs koordinierte Store-Motive aus echten nativen Aufnahmen, Beschreibung und Banner.
+- **[Datenschutz](https://platret.github.io/lernspur-preview/privacy.html)** und **[Support](https://platret.github.io/lernspur-preview/support.html)**.
 
-Die Website läuft auf GitHub Pages und funktioniert auch, wenn der Entwicklungs-Mac ausgeschaltet ist.
+Die Website läuft auf GitHub Pages und funktioniert auch, wenn der Entwicklungs-Mac ausgeschaltet ist. Die früheren Browser-Prototypen bleiben im Repository als Entwicklungshistorie erhalten; sie sind nicht die aktuelle native App.
+
+## Store-Artwork
+
+`store/screenshots/` enthält sechs RGB-PNGs mit 1320 × 2868 Pixeln. Die Screenshots zeigen die tatsächliche native Oberfläche mit eigens angelegten Beispielinhalten. `store/banner.png` ist für Website und Social Sharing gestaltet; die Standard-App-Store-Seite bietet keinen beliebigen Website-Bannerplatz.
 
 ## Website entwickeln
 

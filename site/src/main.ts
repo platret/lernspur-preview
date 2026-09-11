@@ -1,12 +1,11 @@
 import './style.css';
+import { solidWalls } from './phone-geometry';
 
 const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';
 const star = '<svg viewBox="0 0 80 80" fill="currentColor" aria-hidden="true"><path d="m40 0 8 28 26-15-15 27 21 8-28 7-12 25-8-28L6 67l15-27L0 32l28-7z"/></svg>';
-const appStoreIcon = '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29" rx="7" stroke-width="1.5"/><path d="m12 8 10 17M20 8 10 25M7 21h18"/></svg>';
-const getApp = `<button class="store-button" type="button" disabled aria-label="Get the app – bald im App Store verfügbar">${appStoreIcon}<span><small>Bald im App Store</small><strong>Get the app</strong></span></button>`;
-const cameraLayers = Array.from({ length: 9 }, (_, i) => `<span class="camera-layer" style="--depth:${i + 1}px"></span>`).join('');
-const lenses = Array.from({ length: 3 }, (_, i) => `<span class="camera-lens lens-${i + 1}">${Array.from({ length: 5 }, (_, j) => `<i class="lens-ring" style="--depth:${j + 1}px"></i>`).join('')}<i class="lens-glass"></i></span>`).join('');
-const layers = Array.from({ length: 13 }, (_, i) => `<div class="phone-layer" style="--depth:${i - 6}px"></div>`).join('');
+const getApp = `<div class="store-availability"><span>Get the app · bald verfügbar</span><button class="store-button" type="button" disabled aria-label="Get the app – bald im App Store verfügbar"><img src="./vendor/app-store-badge.svg" width="120" height="40" alt="Download on the App Store" /></button></div>`;
+const lenses = Array.from({ length: 3 }, (_, i) => `<span class="camera-lens lens-${i + 1}">${solidWalls(48, 48, 24)}<i class="lens-rim"></i><i class="lens-glass"></i></span>`).join('');
+const monogram = '<svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M34 28v32q0 13 13 13h23" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><circle cx="69" cy="33" r="6.5" fill="currentColor"/></svg>';
 const stories = [
   { number: '01', tag: 'FESTHALTEN', title: 'Bevor der Moment <br>vorbei ist.', text: 'Ein Gedanke. Ein Foto. Eine Sprachmemo. Mehr brauchst du nicht. Zuordnen kannst du später.', foot: 'Einmal tippen. Gespeichert.', image: 'capture', alt: 'Lernspur zeigt die Erfassung mit Text, Foto und Sprachmemo.' },
   { number: '02', tag: 'WEITERKOMMEN', title: 'Kleine Schritte. <br>Echte Fortschritte.', text: 'Setz dir ein Wochenziel, mach es in deinem Tempo und feiere, was du geschafft hast. Ohne Streak-Stress.', foot: 'Dein Ziel. Dein Tempo.', image: 'goals', alt: 'Ein erreichtes Wochenziel mit Fortschrittsanzeige und Rückgängig-Funktion.' },
@@ -35,9 +34,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <span class="hero-star" aria-hidden="true">${star}</span>
         <div class="phone-scene" role="img" aria-label="Dreidimensionale Vorschau des iPhones mit der Lernspur-App. Das Telefon dreht sich beim Scrollen.">
           <div class="phone-model">
-            ${layers}
+            <div class="phone-shell">${solidWalls(274, 595, 45)}</div>
             <div class="phone-front"><div class="phone-screen"><img src="./screens/capture.png" width="1206" height="2622" alt="" fetchpriority="high" /><span class="dynamic-island"></span></div></div>
-            <div class="phone-back"><div class="camera-bump">${cameraLayers}<div class="camera-face">${lenses}<span class="camera-flash"></span><span class="camera-sensor"></span><span class="camera-mic"></span></div></div><img src="./logo.svg" alt="" /><p>Deine Gedanken. <br>Bleiben deine.</p><small>L E R N S P U R</small></div>
+            <div class="phone-back">
+              <div class="rear-glass">${solidWalls(246, 416, 28)}<div class="rear-glass-face">${monogram}</div></div>
+              <div class="camera-bump">${solidWalls(246, 133, 26)}<div class="camera-face">${lenses}<span class="camera-flash"></span><span class="camera-sensor"></span><span class="camera-mic"></span></div></div>
+            </div>
             <div class="phone-button"></div>
           </div>
         </div>

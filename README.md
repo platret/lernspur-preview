@@ -51,7 +51,7 @@ npm ci
 npm run dev
 ```
 
-Öffne `http://localhost:5187`. Die Website verwendet TypeScript, CSS und Vite ohne UI-Framework, externe Fonts, Tracker oder 3D-Bibliothek. Das Phone-Modell besteht aus CSS-Flächen mit Perspektive und Tiefe. Seine Drehung folgt dem Scrollfortschritt. Die burgunderrote Konzept-Rückseite hat ein erhöhtes Kameraplateau und Linsen mit eigener Tiefe. «Get the app» ist bis zur Veröffentlichung ein deaktivierter App-Store-Platzhalter.
+Öffne `http://localhost:5187`. Die Website verwendet TypeScript, CSS und Vite ohne UI-Framework, externe Fonts, Tracker oder 3D-Bibliothek. Das Phone-Modell besteht aus CSS-Flächen mit Perspektive und Tiefe. Seine Drehung folgt dem Scrollfortschritt. Die burgunderrote Konzept-Rückseite hat ein separates Glaspanel mit Lernspur-Monogramm. Kameraplateau, Linsen und Gehäuse besitzen geschlossene Seitenflächen, damit sie auch bei 90° und 270° nicht durchsichtig werden. Die Seiten werden in `src/phone-geometry.ts` erzeugt. «Get the app» bleibt bis zur Veröffentlichung deaktiviert; der Hinweis «bald verfügbar» steht ausserhalb des unveränderten offiziellen App-Store-Badges.
 
 ```text
 site/
@@ -97,3 +97,7 @@ git push origin main
 ```
 
 Relative Asset-Pfade erhalten die Funktionsfähigkeit unter `/lernspur-preview/`. `.nojekyll` bleibt erhalten. Änderungen zuerst lokal prüfen; keine privaten Journale, Backups, Signierungsdaten oder Provisioning-Profile veröffentlichen.
+
+### App-Store-Artwork
+
+`public/vendor/app-store-badge.svg` ist unverändertes Apple-Artwork, direkt von [Apple Developer](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg) bezogen. Quelle und Nutzungshinweise: [Apple Marketing Resources](https://developer.apple.com/app-store/marketing/guidelines/). Das Badge wird separat vom Verfügbarkeitshinweis angezeigt; es führt bis zum Release zu keiner Store-Seite. Apple behält die Rechte an diesem Artwork.

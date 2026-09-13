@@ -1,0 +1,10 @@
+{
+  "name": "lernspur",
+  "compatibility_date": "2026-09-13",
+  "assets": {
+    "directory": "site/dist"
+  },
+  "build": {
+    "command": "npm ci --prefix site && npm run build --prefix site"
+  }
+}
